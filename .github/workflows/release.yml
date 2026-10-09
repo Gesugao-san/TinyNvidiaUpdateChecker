@@ -88,3 +88,5 @@ jobs:
           tag_name: ${{ github.ref_name }}
           body_path: release_notes.md
           draft: false
+          prerelease: ${{ contains(github.ref_name, '-') }}
+          make_latest: ${{ !contains(github.ref_name, '-') }}
