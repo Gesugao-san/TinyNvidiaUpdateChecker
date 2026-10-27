@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/) 
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [Unreleased]
+### Changed
+- Migrated from .NET 8 to .NET 10, as .NET 8 reaches end of support on November 10, 2026. TNUC now requires the .NET Desktop Runtime 10 x64
+
+### Fixed
+- TNUC asking to install .NET even though it was installed, when the `DOTNET_ROOT` environment variable points to another .NET install (for example Scoop's `dotnet-sdk`). TNUC now ignores `DOTNET_ROOT` and uses the global .NET install, see #236
+
 ## [1.29.0] - 2026-09-20
 ### Added
 - Individual driver release notes (does not apply to experimental metadata)
