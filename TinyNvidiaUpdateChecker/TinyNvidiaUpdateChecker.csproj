@@ -15,13 +15,6 @@
     <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
     <ForceDesignerDpiUnaware>true</ForceDesignerDpiUnaware>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <!--
-      Where the published exe looks for the .NET runtime: next to the exe, then the global install.
-      DOTNET_ROOT is skipped on purpose: tools like Scoop's dotnet-sdk point it to a private .NET
-      without the Desktop Runtime TNUC needs, and the apphost never falls back to the global install,
-      so users were asked to install .NET they already had (see #236).
-      Requires a .NET 9+ apphost, and only applies to "dotnet publish".
-    -->
     <AppHostDotNetSearch>AppLocal;Global</AppHostDotNetSearch>
   </PropertyGroup>
   <ItemGroup>

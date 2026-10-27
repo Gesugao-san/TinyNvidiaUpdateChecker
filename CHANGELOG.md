@@ -6,11 +6,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Changed
-- Migrated from .NET 8 to .NET 10, as .NET 8 reaches end of support on November 10, 2026. TNUC now requires the .NET Desktop Runtime 10 x64
+- Migrated from .NET 8 to .NET 10. It will prompt to install runtime if you don't have it already (see reason below) (Author: @Gesugao-san)
 
 ### Fixed
-- TNUC asking to install .NET even though it was installed, when the `DOTNET_ROOT` environment variable points to another .NET install (for example Scoop's `dotnet-sdk`). TNUC now ignores `DOTNET_ROOT` and uses the global .NET install, see #236
-
+- `DOTNET_ROOT` environment variable without .NET runtime would cause a "No runtime found"-error (Author: @Gesugao-san)
 ## [1.29.0] - 2026-09-20
 ### Added
 - Individual driver release notes (does not apply to experimental metadata)
